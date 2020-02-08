@@ -1,0 +1,216 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Curriculum Vitae
+% LaTeX Template
+% Version 1.0 (18/7/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Stefano (http://stefano.italians.nl/)
+%
+% Ever so slightly modified by:
+% Jeremy (https://github.com/mischif)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper, oneside, final, 10pt]{scrartcl} % Paper options using the scrartcl class
+
+\usepackage{scrpage2} % Provides headers and footers configuration
+\usepackage{titlesec} % Allows creating custom \section's
+\usepackage{marvosym} % Allows the use of symbols
+\usepackage{tabularx,colortbl} % Advanced table configurations
+\usepackage{fontspec} % Allows font customization
+\usepackage[hidelinks]{hyperref} % Clickable URLs
+\usepackage[margin=0.5in]{geometry} % Set margins to 0.5 in
+
+%--------------------------------------------------------------------------
+%	FONT SETUP
+%--------------------------------------------------------------------------
+\setmainfont[Path=fonts/,BoldFont=Ubuntu-B]{Ubuntu-R} % Main document font
+\defaultfontfeatures{Mapping=tex-text}
+%--------------------------------------------------------------------------
+
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Section formatting
+
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+
+\addtolength{\voffset}{-0.35in} % Adjust the vertical offset - less whitespace at the top of the page
+\addtolength{\textheight}{0.6in} % Adjust the text height - less whitespace at the bottom of the page
+
+\newcommand{\gray}{\rowcolor[gray]{.90}} % Custom highlighting for the work experience and education sections
+
+\begin{document}
+
+\begin{center} % Center everything in the document
+
+%----------------------------------------------------------------------------------------
+%	HEADER
+%----------------------------------------------------------------------------------------
+
+{\addfontfeature{LetterSpace=20.0}\fontsize{28}{28}\selectfont\scshape Jeremy Brown}\\ % Your name at the top
+{\Large\Letter} \href{mailto:mischif@users.noreply.github.com}{mischif@users.noreply.github.com} \hfill {\Large\ComputerMouse} \href{https://github.com/mischif}{https://github.com/mischif}\\
+
+\vspace{-16pt} % Command for adding or removing whitespace to fit page
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+%\section{Objective}
+
+%A full-time software developer, system administrator or DevOps position with an emphasis on information security.
+
+%\vspace{-16pt} % Command for adding or removing whitespace to fit page
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape}p{0.2in}X}
+\mbox{\textbf{Pindrop}, Atlanta, Georgia} & \\
+\mbox{\textit{Software Engineer}} & \hfill February 2016 --- August 2019\\
+\textbullet & Led efforts to update on-premise appliance codebase to Python 3.\\
+\textbullet & Updated entire call analysis pipeline to Python 3.6.\\
+\textbullet & Rewrote libraries shared with other teams for cross-version compatibility.\\
+\textbullet & Designed and wrote initial telemetry package to monitor SLA adherence.\\
+\textbullet & Migrated call analysis pipeline to local identifiers, solving multiple system-breaking issues at major customers.
+\\[\baselineskip]
+\mbox{\textbf{Microsoft}, Redmond, Washington} & \\
+\mbox{\textit{Software Development Engineer Intern}} & \hfill May 2014 --- August 2014\\
+\textbullet & Designed protocol to use mobile devices as secure access control tokens.\\
+\textbullet & Created reference implementation to test viability in real-world situations.
+\end{tabularx}
+
+\vspace{-16pt} % Command for adding or removing whitespace to fit page
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabularx}{\linewidth}{Xl}
+\gray \textbf{\mbox{Georgia Institute of Technology}} & \\
+\gray \textbf{\mbox{Bachelor of Science in Computer Science}} & May 2015
+\end{tabularx}
+
+\vspace{-14pt} % Command for adding or removing whitespace to fit page
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{Personal Projects}
+
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape}p{0.2in}X}
+\textbf{\mbox{PORTALofPi}} & \hfill\\
+\textbullet & Isolating Tor proxy based on Raspberry Pi and Alpine Linux.\\
+\textbullet & Transparently tunnels TCP and DNS traffic over Tor, and exposes SOCKS proxy for tunneling UDP.
+\\
+\textbf{\mbox{py-fast-trie}} & \hfill\\
+\textbullet & Python 2/3-compatible X-fast trie and Y-fast trie implementations.\\
+\textbullet & Searches are log-logarithmic in the size of the defined universe..\\
+\textbullet & Insertions/deletions are amortized logarithmic or log-logarithmic depending on structure.
+\\
+\textbf{\mbox{py-hopscotch-dict}} & \hfill\\
+\textbullet & Python 2/3-compatible full-featured replacement for standard Python dict that implements hopscotch hashing.\\
+\textbullet & Additions, deletions and lookups have an expected O(1) runtime.
+\\
+%\textbf{\mbox{rstats-logreader}} & \hfill\\
+%\textbullet & Python 2/3-compatible utility for reading version 0 and version 1 RStats logfiles.\\
+%\textbullet & Supports exporting data to CSV or JSON, plus viewing data by arbitrary week/month groupings.
+%\\
+\textbf{\mbox{id3autosort}} & \hfill\\
+\textbullet & Python 2/3-compatible utility for organizing music files based on metadata.\\
+\textbullet & Supports most common audio metadata formats.
+\\
+\raggedright\textbf{WormySharpyLoggy} & \hfill\\
+\textbullet & Android pattern-matching game with a focus on casual play.\\
+\textbullet & Refactored senior design project to support additional game mode and include greater test coverage.
+\\
+\textbf{\mbox{BuzzPrint}} & \hfill\\
+\textbullet & Flask webapp providing access to Georgia Tech print queues via the Internet.\\
+\textbullet & Supports printing Google Docs and valid linked/uploaded document types.\\
+\textbullet & Enables mobile devices and Linux computers to use Georgia Tech print queues.
+\end{tabularx}
+
+\vspace{-14pt} % Command for adding or removing whitespace to fit page
+
+%----------------------------------------------------------------------------------------
+%	TALKS
+%----------------------------------------------------------------------------------------
+
+\section{Talks \& Presentations}
+
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape}p{0.2in}X}
+\mbox{\textbf{Georgia Institute of Technology}, Atlanta, Georgia} & \\
+\mbox{\textit{An Introduction to Web Security}} & \hfill October 23, 2013\\
+\textbullet & A lighthearted exposure to select vulnerability classes from the OWASP Top 10 with potential mitigations.\\
+\textbullet & Delivered as part of web security module created by me for introductory graduate information security course.
+\end{tabularx}
+
+\vspace{-16pt} % Command for adding or removing whitespace to fit page
+
+%----------------------------------------------------------------------------------------
+%	ACTIVITIES
+%----------------------------------------------------------------------------------------
+
+\section{Activities \& Achievements}
+
+\begin{tabularx}{\linewidth}{>{\raggedleft\scshape}p{0.2in}X}
+\mbox{\textbf{Anime Weekend Atlanta}, Atlanta, Georgia} & \\
+\mbox{\textit{Staffer of the Year --- Technical/Main Events}} & \hfill September 2015\\
+\mbox{\textit{Convention Technical Crew --- Supervisor}} & \hfill September 2011 --- Present\\
+\mbox{\textit{Convention Technical Crew}} & \hfill September 2009 --- September 2011\\
+\textbullet & Managed team during assembly and disassembly of multiple audio/visual systems.\\
+\textbullet & Provided first-line technical support and maintenance.\\
+\textbullet & Designed mentor system to boost staff morale and reduce turnover.
+\end{tabularx}
+
+\vspace{-16pt} % Command for adding or removing whitespace to fit page
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\begin{tabularx}{\linewidth}{>{\scshape}p{2in}X}
+\textbf{Programming Languages} & Python (c. 2012), Bash (c. 2011), SQL (c. 2017)\\
+\textbf{Additional Skill Areas} & Computer security, Systems administration, Network administration\\
+\textbf{Tools and Frameworks} & Android, Flask, Git, GitHub, Gradle, Hypothesis, Make, Maven\\
+							  & MySQL, Jenkins, pytest
+\end{tabularx}
+
+
+\end{center}
+
+%----------------------------------------------------------------------------------------
+% FOOTER
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\headfont}{\normalfont\rmfamily\scshape} % Font settings for footer
+
+\cofoot{
+\centering
+\addfontfeature{LetterSpace=20.0}\fontsize{12.5}{17}\selectfont % Letter spacing and font size
+\renewcommand{\\}{\ {\large\textbullet}\ }
+{\Large\Telefon} (404) 770-5678 % Your email address and phone number
+
+PO Box 57\\Red Oak\\GA\\30272
+}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
